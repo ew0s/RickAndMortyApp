@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
         didSet {
             characterImageView.contentMode = .scaleAspectFit
             characterImageView.clipsToBounds = true
-            characterImageView.layer.cornerRadius = characterImageView.bounds.height / 2
+            characterImageView.makeRounded()
             characterImageView.backgroundColor = .white
         }
     }

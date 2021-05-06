@@ -11,6 +11,8 @@
 		A72C76D22642D2DE0082BB89 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76D12642D2DE0082BB89 /* RickAndMorty.swift */; };
 		A72C76D62642DB200082BB89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76D52642DB200082BB89 /* NetworkManager.swift */; };
 		A72C76D926430BE10082BB89 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76D826430BE10082BB89 /* TableViewCell.swift */; };
+		A72C76DB264360800082BB89 /* DetailedCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76DA264360800082BB89 /* DetailedCharacterViewController.swift */; };
+		A72C76DE264368690082BB89 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76DD264368690082BB89 /* ExtensionUIImageView.swift */; };
 		A75B8AF52642BF1C00D8E057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B8AF42642BF1C00D8E057 /* AppDelegate.swift */; };
 		A75B8AF72642BF1C00D8E057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75B8AF62642BF1C00D8E057 /* SceneDelegate.swift */; };
 		A75B8AFC2642BF1C00D8E057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75B8AFA2642BF1C00D8E057 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		A72C76D12642D2DE0082BB89 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		A72C76D52642DB200082BB89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A72C76D826430BE10082BB89 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A72C76DA264360800082BB89 /* DetailedCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCharacterViewController.swift; sourceTree = "<group>"; };
+		A72C76DD264368690082BB89 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
 		A75B8AF12642BF1C00D8E057 /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75B8AF42642BF1C00D8E057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75B8AF62642BF1C00D8E057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A72C76DC2643684C0082BB89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A72C76DD264368690082BB89 /* ExtensionUIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A75B8AE82642BF1C00D8E057 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +106,7 @@
 		A75B8AF32642BF1C00D8E057 /* RickAndMortyApp */ = {
 			isa = PBXGroup;
 			children = (
+				A72C76DC2643684C0082BB89 /* Extensions */,
 				A72C76D726430BD40082BB89 /* Views */,
 				A72C76D32642DAD50082BB89 /* Core */,
 				A72C76D02642D2D20082BB89 /* Models */,
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				A72C76CE2642D19E0082BB89 /* CharactersTableViewController.swift */,
+				A72C76DA264360800082BB89 /* DetailedCharacterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -213,8 +227,10 @@
 				A75B8AF52642BF1C00D8E057 /* AppDelegate.swift in Sources */,
 				A72C76CF2642D19E0082BB89 /* CharactersTableViewController.swift in Sources */,
 				A72C76D62642DB200082BB89 /* NetworkManager.swift in Sources */,
+				A72C76DB264360800082BB89 /* DetailedCharacterViewController.swift in Sources */,
 				A72C76D926430BE10082BB89 /* TableViewCell.swift in Sources */,
 				A75B8AF72642BF1C00D8E057 /* SceneDelegate.swift in Sources */,
+				A72C76DE264368690082BB89 /* ExtensionUIImageView.swift in Sources */,
 				A72C76D22642D2DE0082BB89 /* RickAndMorty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

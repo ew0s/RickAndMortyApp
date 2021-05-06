@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="-242.40000000000001" y="101.19940029985008"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed Character View Controller-->
         <scene sceneID="Yu8-9W-bJr">
             <objects>
-                <viewController id="VkX-5n-PMR" sceneMemberID="viewController">
+                <viewController id="VkX-5n-PMR" customClass="DetailedCharacterViewController" customModule="RickAndMortyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KI1-CS-d4r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,12 +110,12 @@
                                     <constraint firstAttribute="width" secondItem="tgw-zA-J9b" secondAttribute="height" multiplier="1:1" id="rbl-F1-3Gr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n0-eW-wlF">
-                                <rect key="frame" x="70" y="340" width="235" height="144"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n0-eW-wlF">
+                                <rect key="frame" x="45" y="340" width="285" height="144"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6n0-eW-wlF" secondAttribute="height" multiplier="235:144" id="iv6-ak-NxC"/>
+                                    <constraint firstAttribute="width" secondItem="6n0-eW-wlF" secondAttribute="height" multiplier="235:144" constant="50" id="iv6-ak-NxC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -132,6 +132,9 @@
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="VkX-5n-PMR" eventType="touchUpInside" id="7I0-JD-klU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FgB-gd-tq2"/>
@@ -151,6 +154,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kpb-tZ-jDY"/>
+                    <connections>
+                        <outlet property="characterDescriptionLabel" destination="6n0-eW-wlF" id="cCe-va-VGw"/>
+                        <outlet property="characterImageView" destination="tgw-zA-J9b" id="afI-ho-qur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbX-BO-RSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
