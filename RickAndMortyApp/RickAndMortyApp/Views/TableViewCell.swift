@@ -33,4 +33,9 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    func configure(with episode: String) {
+        nameLabel.text = episode
+        nameLabel.font = UIFont.boldSystemFont(ofSize: nameLabel.font.pointSize)
+        nameLabel.textColor = .white
+    }
 }
