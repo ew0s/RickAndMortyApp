@@ -147,7 +147,13 @@
                             <constraint firstItem="tgw-zA-J9b" firstAttribute="top" secondItem="FgB-gd-tq2" secondAttribute="top" constant="100" id="u7X-Kh-84C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kpb-tZ-jDY"/>
+                    <navigationItem key="navigationItem" id="Kpb-tZ-jDY">
+                        <barButtonItem key="rightBarButtonItem" title="Episodes" id="583-bE-Nv1">
+                            <connections>
+                                <segue destination="BWQ-rl-K9U" kind="presentation" id="5sg-mE-T5G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="characterDescriptionLabel" destination="6n0-eW-wlF" id="cCe-va-VGw"/>
                         <outlet property="characterImageView" destination="tgw-zA-J9b" id="afI-ho-qur"/>
@@ -157,6 +163,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbX-BO-RSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="581.60000000000002" y="100.29985007496252"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Hyy-c1-KEu">
+            <objects>
+                <tableViewController id="BWQ-rl-K9U" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BDr-hD-ntl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FDa-Ll-Cgx">
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FDa-Ll-Cgx" id="oGr-da-LA0">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BWQ-rl-K9U" id="AMM-lP-BpT"/>
+                            <outlet property="delegate" destination="BWQ-rl-K9U" id="08U-00-8JZ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AE-7Z-yos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="101"/>
         </scene>
     </scenes>
 </document>
