@@ -12,23 +12,21 @@ class DetailedCharacterViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var characterImageView: UIImageView!
     @IBOutlet var characterDescriptionLabel: UILabel!
+    @IBOutlet var viewActivityIndicator: UIActivityIndicatorView!
     
     // MARK: - Public properties
-    var character: Character!
+    var character: Character?
+    var characterURL: String!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewActivityIndicator = showSpinner(in: view)
         setViewController()
     }
     
     override func viewWillLayoutSubviews() {
         characterImageView.makeRounded()
-    }
-    
-    // MARK: - IB Actions
-    @IBAction func closeButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true)
     }
 }
 
@@ -36,20 +34,30 @@ class DetailedCharacterViewController: UIViewController {
 extension DetailedCharacterViewController {
     
     private func setViewController() {
-        setCharacterImage()
-        setDescriptionLabel()
-    }
-    
-    private func setCharacterImage() {
-        NetworkImageManager.shared.fetchImage(from: character.image) { data in
-            guard let data = data else { return }
+        NetworkManager.shared.fetchCharacter(from: characterURL) { character in
+            self.character = character
+            self.title = character.name
+            self.characterDescriptionLabel.text = character.description
+            
+            guard let imageData = NetworkImageManager.shared.fetchImage(from: character.image) else {
+                return
+            }
             DispatchQueue.main.async {
-                self.characterImageView.image = UIImage(data: data)
+                self.characterImageView.image = UIImage(data: imageData)
+                self.viewActivityIndicator.stopAnimating()
             }
         }
     }
     
-    private func setDescriptionLabel() {
-        characterDescriptionLabel.text = character.description
+    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .white
+        activityIndicator.startAnimating()
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        
+        view.addSubview(activityIndicator)
+        
+        return activityIndicator
     }
 }

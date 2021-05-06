@@ -41,6 +41,10 @@ class CharactersTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailedCharacterVC = segue.destination as? DetailedCharacterViewController else {
@@ -48,7 +52,7 @@ class CharactersTableViewController: UITableViewController {
         }
         guard let selectedRowIndex = tableView.indexPathForSelectedRow?.row else { return }
         
-        detailedCharacterVC.character = rickAndMorty?.results[selectedRowIndex]
+        detailedCharacterVC.characterURL = rickAndMorty?.results[selectedRowIndex].url
     }
 }
 
