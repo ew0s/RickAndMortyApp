@@ -40,6 +40,16 @@ class CharactersTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailedCharacterVC = segue.destination as? DetailedCharacterViewController else {
+            return
+        }
+        guard let selectedRowIndex = tableView.indexPathForSelectedRow?.row else { return }
+        
+        detailedCharacterVC.character = rickAndMorty?.results[selectedRowIndex]
+    }
 }
 
 // MARK: - Private methods

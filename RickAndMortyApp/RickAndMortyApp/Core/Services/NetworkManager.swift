@@ -65,6 +65,20 @@ class NetworkManager {
     private  init() {}
 }
 
-// MARK: - Private methods
-extension NetworkManager {
+class NetworkImageManager {
+    
+    // MARK: - Public properties
+    static let shared = NetworkImageManager()
+    
+    // MARK: - Public methods
+    func fetchImage(from url: String?, with complition: @escaping (Data?) -> Void) {
+        guard let stringURL = url else { return }
+        guard let url = URL(string: stringURL) else { return }
+        DispatchQueue.main.async {
+            complition(try? Data(contentsOf: url))
+        }
+    }
+    
+    // MARK: - Initialization
+    private init() {}
 }
