@@ -28,6 +28,18 @@ class DetailedCharacterViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         characterImageView.makeRounded()
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else {
+            return
+        }
+        guard let characterEpisodesVC = navigationVC.topViewController as? CharacterEpisodesTableViewController else {
+            return
+        }
+        
+        characterEpisodesVC.characterEpisodes = character?.episode
+    }
 }
 
 // MARK: - Private methods

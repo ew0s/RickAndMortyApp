@@ -39,6 +39,13 @@ struct Character: Decodable {
     }
 }
 
+struct Episode {
+    let name: String
+    let air_date: String
+    let characters: [String]
+    let url: String
+}
+
 struct Location: Decodable {
     let name: String
 }
