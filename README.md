@@ -4,9 +4,9 @@
 
 A pet project application which shows abilities of __Swift__ native request tools
 
-![img](/README_images/1.png)
-![img](/README_images/2.png)
-![img](/README_images/3.png)
+<img src="/README_images/1.png" alt="drawing" width="250"/>
+<img src="/README_images/2.png" alt="drawing" width="250"/>
+<img src="/README_images/3.png" alt="drawing" width="250"/>
 
 ## Getting Started
 
