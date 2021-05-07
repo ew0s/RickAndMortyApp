@@ -23,6 +23,18 @@ class EpisodeViewController: UIViewController {
         super.viewDidLoad()
         setViewController()
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailedCharacterVC = segue.destination as? DetailedCharacterViewController else {
+            return
+        }
+        guard let indexForCharacter = episodeCharactersTableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        detailedCharacterVC.characterURL = episodeCharacters[indexForCharacter.row].url
+    }
 }
 
 // MARK: - Private methods
@@ -79,9 +91,5 @@ extension EpisodeViewController: UITableViewDataSource {
 extension EpisodeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let characterUrl = episode?.characters[indexPath.row]
-//        performSegue(withIdentifier: "showCharacter", sender: characterUrl)
-        //print(episodeCharactersTableView.indexPathForSelectedRow?.row ?? 0)
-        print(episodeCharacters.count)
     }
 }
