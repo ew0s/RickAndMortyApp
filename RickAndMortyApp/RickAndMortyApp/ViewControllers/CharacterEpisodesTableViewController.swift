@@ -15,7 +15,6 @@ class CharacterEpisodesTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.separatorStyle = .singleLine
     }
     
     // MARK: - IB Actions
@@ -34,6 +33,18 @@ class CharacterEpisodesTableViewController: UITableViewController {
         setTableViewCell(for: cell, and: indexPath)
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episodeVC = segue.destination as? EpisodeViewController else {
+            return
+        }
+        guard let selectedRowIndex = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        episodeVC.episodeURL = characterEpisodes[selectedRowIndex.row].description
     }
 }
 

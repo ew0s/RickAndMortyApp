@@ -37,6 +37,27 @@ class NetworkManager {
         }.resume()
     }
     
+    func fetchEpisode(from url: String?, completion: @escaping(Episode) -> Void) {
+        guard let stringUrl = url else { return }
+        guard let url = URL(string: stringUrl) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
+                print(error ?? "no descripption")
+                return
+            }
+            
+            do {
+                let episode = try JSONDecoder().decode(Episode.self, from: data)
+                DispatchQueue.main.async {
+                    completion(episode)
+                }
+            } catch let error {
+                print(error)
+            }
+        }.resume()
+    }
+    
     func fetchCharacter(from url: String?, with complition: @escaping (Character) -> Void) {
         guard let stringURL = url else { return }
         guard let url = URL(string: stringURL) else { return }

@@ -39,11 +39,18 @@ struct Character: Decodable {
     }
 }
 
-struct Episode {
+struct Episode: Decodable {
     let name: String
     let air_date: String
+    let episode: String
     let characters: [String]
-    let url: String
+    
+    var description: String {
+        """
+    Numeber of characters: \(characters.count)
+    Date: \(air_date)
+    """
+    }
 }
 
 struct Location: Decodable {

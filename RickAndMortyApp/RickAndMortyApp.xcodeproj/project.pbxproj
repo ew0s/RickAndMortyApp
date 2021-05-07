@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A710660A264468410017BF0A /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7106609264468410017BF0A /* EpisodeViewController.swift */; };
 		A72C76CF2642D19E0082BB89 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76CE2642D19E0082BB89 /* CharactersTableViewController.swift */; };
 		A72C76D22642D2DE0082BB89 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76D12642D2DE0082BB89 /* RickAndMorty.swift */; };
 		A72C76D62642DB200082BB89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C76D52642DB200082BB89 /* NetworkManager.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7106609264468410017BF0A /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		A72C76CE2642D19E0082BB89 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
 		A72C76D12642D2DE0082BB89 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		A72C76D52642DB200082BB89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A72C76CE2642D19E0082BB89 /* CharactersTableViewController.swift */,
 				A72C76DA264360800082BB89 /* DetailedCharacterViewController.swift */,
 				A73B8E1726443DCB001AB4E6 /* CharacterEpisodesTableViewController.swift */,
+				A7106609264468410017BF0A /* EpisodeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				A73B8E1826443DCB001AB4E6 /* CharacterEpisodesTableViewController.swift in Sources */,
 				A72C76CF2642D19E0082BB89 /* CharactersTableViewController.swift in Sources */,
 				A72C76D62642DB200082BB89 /* NetworkManager.swift in Sources */,
+				A710660A264468410017BF0A /* EpisodeViewController.swift in Sources */,
 				A72C76DB264360800082BB89 /* DetailedCharacterViewController.swift in Sources */,
 				A72C76D926430BE10082BB89 /* TableViewCell.swift in Sources */,
 				A75B8AF72642BF1C00D8E057 /* SceneDelegate.swift in Sources */,
