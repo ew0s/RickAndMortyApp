@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		A75B8AFC2642BF1C00D8E057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75B8AFA2642BF1C00D8E057 /* Main.storyboard */; };
 		A75B8AFE2642BF1D00D8E057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75B8AFD2642BF1D00D8E057 /* Assets.xcassets */; };
 		A75B8B012642BF1D00D8E057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75B8AFF2642BF1D00D8E057 /* LaunchScreen.storyboard */; };
+		A7D6D3D226474C7100A74D31 /* NetworkImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6D3D126474C7100A74D31 /* NetworkImageManager.swift */; };
 		E8763D2DE8006BF03076437F /* Pods_RickAndMortyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D38F892A7F50B6A51BB06AB /* Pods_RickAndMortyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		A75B8AFD2642BF1D00D8E057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75B8B002642BF1D00D8E057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75B8B022642BF1D00D8E057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7D6D3D126474C7100A74D31 /* NetworkImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkImageManager.swift; path = ../../../../../../../Documents/NetworkImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,6 @@
 				828BA4866F00CFBE486AE14A /* Pods-RickAndMortyApp.debug.xcconfig */,
 				6B4A9B144274FFA39E3D0C05 /* Pods-RickAndMortyApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A72C76D52642DB200082BB89 /* NetworkManager.swift */,
+				A7D6D3D126474C7100A74D31 /* NetworkImageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -308,6 +310,7 @@
 				A72C76D926430BE10082BB89 /* TableViewCell.swift in Sources */,
 				A75B8AF72642BF1C00D8E057 /* SceneDelegate.swift in Sources */,
 				A72C76DE264368690082BB89 /* ExtensionUIImageView.swift in Sources */,
+				A7D6D3D226474C7100A74D31 /* NetworkImageManager.swift in Sources */,
 				A72C76D22642D2DE0082BB89 /* RickAndMorty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
