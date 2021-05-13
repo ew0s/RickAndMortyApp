@@ -55,7 +55,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6p6-Dp-gEO">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6p6-Dp-gEO" customClass="CharacterImageView" customModule="RickAndMortyApp" customModuleProvider="target">
                                             <rect key="frame" x="16" y="10" width="70" height="70.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="70" id="87d-08-xE0"/>
@@ -114,7 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgw-zA-J9b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tgw-zA-J9b" customClass="CharacterImageView" customModule="RickAndMortyApp" customModuleProvider="target">
                                 <rect key="frame" x="84.5" y="144" width="206" height="206"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tgw-zA-J9b" secondAttribute="height" multiplier="1:1" id="rbl-F1-3Gr"/>
@@ -129,16 +129,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="fuC-ba-cJl">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FgB-gd-tq2"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fuC-ba-cJl" firstAttribute="centerX" secondItem="KI1-CS-d4r" secondAttribute="centerX" id="91c-yb-DWW"/>
-                            <constraint firstItem="fuC-ba-cJl" firstAttribute="centerY" secondItem="KI1-CS-d4r" secondAttribute="centerY" id="EDf-K4-R10"/>
                             <constraint firstItem="6n0-eW-wlF" firstAttribute="top" secondItem="tgw-zA-J9b" secondAttribute="bottom" constant="40" id="Uzb-Zk-Zsg"/>
                             <constraint firstItem="6n0-eW-wlF" firstAttribute="centerX" secondItem="KI1-CS-d4r" secondAttribute="centerX" id="Xwh-ny-aw4"/>
                             <constraint firstItem="tgw-zA-J9b" firstAttribute="height" secondItem="KI1-CS-d4r" secondAttribute="height" multiplier="0.309119" id="abT-7X-sHu"/>
@@ -157,7 +151,6 @@
                     <connections>
                         <outlet property="characterDescriptionLabel" destination="6n0-eW-wlF" id="cCe-va-VGw"/>
                         <outlet property="characterImageView" destination="tgw-zA-J9b" id="afI-ho-qur"/>
-                        <outlet property="viewActivityIndicator" destination="fuC-ba-cJl" id="US8-Mj-rDl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbX-BO-RSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -327,7 +320,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-1T-qpp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-1T-qpp" customClass="CharacterImageView" customModule="RickAndMortyApp" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="158" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kSs-1T-qpp" secondAttribute="height" multiplier="1:1" id="Rgp-3V-d4l"/>

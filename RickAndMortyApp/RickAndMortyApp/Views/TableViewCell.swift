@@ -11,7 +11,7 @@ class TableViewCell: UITableViewCell {
     
     // MARK: - IB Outlets
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet var characterImageView: UIImageView! {
+    @IBOutlet var characterImageView: CharacterImageView! {
         didSet {
             characterImageView.contentMode = .scaleAspectFit
             characterImageView.clipsToBounds = true

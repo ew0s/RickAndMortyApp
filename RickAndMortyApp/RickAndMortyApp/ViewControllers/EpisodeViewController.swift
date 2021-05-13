@@ -72,13 +72,14 @@ extension EpisodeViewController: UITableViewDataSource {
         
         if episodeCharacters.indices.contains(indexPath.row) {
             let character = episodeCharacters[indexPath.row]
+            
+            let characterImageView = CharacterImageView()
+            characterImageView.fetchImage(from: character.image ?? "")
+            
             configuration.text = character.name
             configuration.textProperties.color = .white
-            
-            if let imageData = NetworkImageManager.shared.fetchImage(from: character.image) {
-                configuration.image = UIImage(data: imageData)
-                configuration.imageProperties.cornerRadius = (configuration.image?.size.height)! / 2
-            }
+            configuration.image = characterImageView.image
+            configuration.imageProperties.cornerRadius = (configuration.image?.size.height ?? 0) / 2
         }
 
         cell.contentConfiguration = configuration
