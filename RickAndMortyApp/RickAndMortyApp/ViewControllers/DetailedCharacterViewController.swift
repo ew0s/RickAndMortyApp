@@ -10,9 +10,8 @@ import UIKit
 class DetailedCharacterViewController: UIViewController {
     
     // MARK: - IB Outlets
-    @IBOutlet var characterImageView: UIImageView!
+    @IBOutlet var characterImageView: CharacterImageView!
     @IBOutlet var characterDescriptionLabel: UILabel!
-    @IBOutlet var viewActivityIndicator: UIActivityIndicatorView!
     
     // MARK: - Public properties
     var character: Character?
@@ -21,7 +20,6 @@ class DetailedCharacterViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewActivityIndicator = showSpinner(in: view)
         setViewController()
     }
     
@@ -50,26 +48,7 @@ extension DetailedCharacterViewController {
             self.character = character
             self.title = character.name
             self.characterDescriptionLabel.text = character.description
-            
-            guard let imageData = NetworkImageManager.shared.fetchImage(from: character.image) else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.characterImageView.image = UIImage(data: imageData)
-                self.viewActivityIndicator.stopAnimating()
-            }
+            self.characterImageView.fetchImage(from: character.image ?? "")
         }
-    }
-    
-    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .white
-        activityIndicator.startAnimating()
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-        
-        view.addSubview(activityIndicator)
-        
-        return activityIndicator
     }
 }
